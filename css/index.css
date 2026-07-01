@@ -1,0 +1,330 @@
+/*====Reset Basico====*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*====Barra de Navegación====*/
+nav {
+    background-color: #56646a; 
+    position: sticky;
+    top: 0;
+}
+main{
+
+    background-color: white;
+}
+
+.menu {
+    list-style: none;     /*Quita las viñetas  */
+    display: flex;        /*Opciones en horizontal */
+}
+.menu a {
+    display: block;        /*Hace que el enlace ocupe todo el espacio del elemento */
+    color: #ffffff;      /*Color del texto */
+    text-decoration: none; /*Quita el subrayado */
+    padding: 15px 20px;    /*Espaciado interno */
+}
+
+.menu a:hover {
+    background-color: #4d657cbd; /*Color al pasar el mouse */
+}
+
+/*====Submenu desplegable (solo CSS)====*/
+.menu li {
+    position: relative; /*Punto de referencia del submenu */
+}
+
+/*Solo la LISTA     anidada se oculta (ul.submenu), no el li padre*/
+ul.submenu {
+    display: none;        /*Oculta el submenu por defecto */
+    position: absolute;   /*Posiciona el submenu respecto al li padre */
+    top: 100%;            /*Coloca el submenu justo debajo del li padre */
+    left: 0;              /*Alinea el submenu a la izquierda del li padre */
+    background-color: #0d5b67b3; /*Color del submenu */
+    min-width: 210px;     /*Ancho mínimo del submenu */
+    list-style: none;     /*Quita las viñetas del submenu */
+}
+
+/*Al pasar el mouse por el li padre, se muestra su lista*/
+.menu li:hover > .submenu {
+    display: block;
+}
+
+ul.submenu a {
+    padding: 12px 20px;   /*Espaciado interno del submenu */
+}
+
+ul.submenu a:hover {
+    background-color: #77cdba; /*Color al pasar el mouse por el submenu */
+}
+body {
+    font-family: Arial, sans-serif; /*Fuente general */
+    background-color: white; /*Color de fondo */
+    color: #333333; /*Color del texto */
+    line-height: 1.6; /*Altura de línea para mejorar la legibilidad */
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo img{
+    width: 90px;
+    height: auto;
+}
+.nombre-colegio{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+    color: white;
+    font-style: italic;
+}
+.linea1{
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+.linea2{
+    font-size: 30px;
+    font-weight: bold;
+}
+.linea3{
+    font-size: 25px;
+    font-weight: bold;
+}
+nav{
+    background-image:
+    linear-gradient(rgba(0,0,0,0.5),
+                    rgba(0,0,0,0.5)),
+    url("../img/navegacion.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 20px 20px;
+}
+/* Sección de bienvenida  de aquí hacía abajo comienza en el cuerpo de la página */
+.banner{
+    height: 350px;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,.4),
+                    rgba(0,0,0,.4)),
+    url("../img/fondo.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+nav{
+    background-color: #56646a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 40px 4px; /* arriba-abajo | izquierda-derecha */
+}
+.banner h3{
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.banner h1{
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.banner p{
+    font-size: 24px;
+}
+
+/* Noticias */
+
+.noticias{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.noticias h2{
+    margin-bottom: 40px;
+}
+
+.contenedor-noticias{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+.tarjeta{
+    width: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4x 10px black;
+    font-family: Arial;
+   
+  
+}
+.tarjeta img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.tarjeta h3{
+    margin: 10px;
+}
+.tarjeta p{
+    margin: 5px 10px;
+}
+.tarjeta:hover img{
+    transform: scale(1.1);
+}
+
+/* Botón */
+
+.btn-reglamento{
+    display: inline-block;
+    margin-top: 30px;
+
+    padding: 12px 25px;
+
+    background-color: #48688147;
+    color: black;
+
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-reglamento:hover{
+    transform: scale(1.1);
+}
+.Btn-inicio{
+    display: inline-block;
+    margin-top: 1px;
+    padding: 12px 25px;
+    background-color: #7092c293;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 8px;
+}
+.Btn-inicio:hover{
+    transform: scale(1.1);
+}
+/* ========================= */
+/* HORARIO ACADÉMICO */
+/* ========================= */
+
+.horario{
+    width: 95%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.horario h2{
+    color: #003366;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.horario table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.horario th{
+    background: #003366;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.horario td{
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 0.95rem;
+}
+
+.horario tbody tr:hover{
+    background: #f0f7ff;
+    transition: 0.3s;
+}
+
+.descanso td{
+    background: #ffeb3b;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Colores para materias */
+
+.horario tbody tr td:nth-child(2){
+    background: #e8f0ff;
+}
+
+.horario tbody tr td:nth-child(3){
+    background: #eefbe8;
+}
+
+.horario tbody tr td:nth-child(4){
+    background: #fff5d6;
+}
+
+.horario tbody tr td:nth-child(5){
+    background: #e8f7ff;
+}
+
+.horario tbody tr td:nth-child(6){
+    background: #f8e8ff;
+}
+
+/* Responsive */
+
+@media (max-width: 768px){
+
+    .horario{
+        overflow-x: auto;
+    }
+
+    .horario table{
+        min-width: 700px;
+    }
+
+    .horario h2{
+        font-size: 1.5rem;
+    }
+}
+h1{
+    display:none;
+}
+.btn-info{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #0d6efd;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-info:hover{
+    background-color: #084298;
+    transform: scale(1.05);
+}

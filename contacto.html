@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Integral San Miguel</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+    
+    <nav>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Colegio Integral San Miguel">
+            <div class="nombre-colegio">
+                <span class="linea1">COLEGIO</span>
+                <span class="linea2">INTEGRAL</span>
+                <span class="linea3">SAN MIGUEL</span>
+             </div>
+         </div>
+        <ul class="menu">
+            <li>
+               
+                <!--Opcion Nosotros-->
+                <a href="nosotros.html">Nosotros &#9662;</a>
+                 <ul class="submenu">
+                  <li><a href="#historia">Historia</a></li>
+                  <li><a href="#vision">Visión </a></li>
+                  <li><a href="#mision">Misión</a></li>
+                  <li><a href="#valores_institucionales">Valores Institucionales</a></li>
+                  <li><a href="#himno">Himno</a></li>
+                  <li><a href="#bandera">Banderas</a></li>
+                </ul> 
+            </li>
+            <li>
+                <!--Opción Programas Academicos-->  
+                <a href="programas.html">Ofertas Académicas &#9662;</a>
+                 <ul class="submenu">
+                  <li><a href="programa_academico_preescolar.html">Preescolar</a></li>
+                  <li><a href="programa_academico_primaria.html">Primaria</a></li>
+                  <li><a href="programa_academico_bachillerato.html">Bachillerato</a></li>
+                </ul>
+            </li>
+            <!--Servicios-->
+            <li><a href="servicios.html">Servicios</a></li>
+            <!--Noticias-->
+            <li><a href="galeria.html">Galería</a></li>  
+             <li><a href="noticias.html">Noticias</a></li>   
+            <!--Contactos-->
+            <li><a href="contacto.html">Contacto</a></li>
+             <!--inicio-->
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="inicio.html" class="Btn-inicio">Iniciar Sesión</a></li>
+
+        </ul>
+    </nav>
+    </header>
+    <main>
+
+    <header>
+        <h1>Contáctanos</h1>
+        <p>Déjanos tus datos y nos comunicaremos contigo.</p>
+    </header>
+
+    <form action="#" method="post">
+
+        <h2>Datos Personales</h2>
+
+        <label for="nombre">Nombre:</label>
+        <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ingresa tu nombre"
+            required
+            minlength="3"
+            maxlength="30">
+
+        <label for="apellido">Apellidos:</label>
+        <input
+            type="text"
+            id="apellido"
+            name="apellido"
+            placeholder="Ingresa tus apellidos"
+            required
+            minlength="3"
+            maxlength="50">
+
+        <label for="correo">Correo Electrónico:</label>
+        <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="ejemplo@correo.com"
+            required
+            maxlength="100">
+
+        <label for="telefono">Teléfono:</label>
+        <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="3001234567"
+            required
+            minlength="10"
+            maxlength="10">
+
+        <h2>Información Académica</h2>
+
+        <label for="programa">Programa de interés:</label>
+        <select id="programa" name="programa" required>
+            <option value="">Seleccione una opción</option>
+            <option value="preescolar">Preescolar</option>
+            <option value="primaria">Primaria</option>
+            <option value="bachillerato">Bachillerato</option>
+        </select>
+
+        <h2>Mensaje</h2>
+
+        <label for="mensaje">Escribe tu mensaje:</label>
+        <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Escribe aquí tu mensaje..."
+            required
+            minlength="10"
+            maxlength="300"></textarea>
+
+        <div class="botones">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+        </div>
+
+    </form>
+    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31835.405786634125!2d-73.3768!3d5.5353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a7c3e5e5e5e5e%3A0x5e5e5e5e5e5e5e5e!2sTunja%2C%20Boyac%C3%A1!5e0!3m2!1ses!2sco!4v1680000000000!5m2!1ses!2sco" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+</main>
+    <footer class="footer" id="contacto">
+        <div class="contenido-footer">
+
+        <div class="log-pie">
+        <img src="img/pie.png" alt="pie de pagina">
+       </div>
+
+        <div class="columna">
+            <h3>Ubicación</h3>
+            <p>Tunja - Boyacá</p>
+            <p>Calle 23 # 0-00</p>
+        </div>
+
+        <div class="columna">
+            <h3>Contacto</h3>
+            <p>(608) 00000000111</p>
+            <p>contacto@colegiosanmiguel.edu.co</p>
+        </div>
+
+        <div class="columna">
+            <h3>Acceso</h3>
+            <a href="#">Iniciar Sesión</a>
+            <a href="#">Plataforma Educativa</a>
+            <a href="#">Soporte</a>
+        </div>
+        <div class="footer-beneficios">
+             <div class="beneficio">
+             <i class="fa-solid fa-users"></i>
+             <p>Formación<br>Integral</p>
+        </div>
+        <div class="beneficio">
+            <i class="fa-solid fa-book-open"></i>
+            <p>Excelencia<br>Académica</p>
+        </div>
+        <div class="beneficio">
+             <i class="fa-regular fa-heart"></i>
+             <p>Valores y<br>Compromiso</p>
+        </div>
+        <div class="beneficio">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <p>Líderes del<br>Mañana</p>
+        </div>
+        <div class="frase-footer">
+            Educamos con valores,<br>
+             transformamos el futuro.
+        </div>
+       
+    
+
+        </div>
+
+       </div>
+       <div class="copy">
+        © 2026 Colegio San Miguel. Todos los derechos reservados.
+       </div>
+    </footer>
+</body>
+</html>

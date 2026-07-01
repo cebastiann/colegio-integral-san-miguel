@@ -1,0 +1,60 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f8fb;
+}
+
+/* CONTENEDOR */
+.ofertas-academicas{
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* TARJETAS BASE */
+.ofertas-academicas section{
+    background: #f5e9ff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: all .3s ease;
+}
+
+/* HOVER */
+.ofertas-academicas section:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+/* TITULOS */
+.ofertas-academicas h2{
+    color: #5b2c83;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #5b2c83;
+    padding-bottom: 8px;
+}
+
+/* TEXTO */
+.ofertas-academicas p{
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* DESTACAR PRECIOS */
+.ofertas-academicas strong{
+    color: #3d1a5c;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+    .ofertas-academicas{
+        grid-template-columns: 1fr;
+    }
+}
+main{
+    background-color: azure;
+}

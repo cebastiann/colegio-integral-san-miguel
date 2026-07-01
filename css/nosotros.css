@@ -1,0 +1,235 @@
+body{
+    background: #f4f8fb;
+    font-family: Arial, sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.tarjetas-nosotros{
+    width: 90%;
+    max-width: 1400px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* TARJETAS */
+.tarjetas-nosotros section{
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: all .3s ease;
+}
+
+/* HOVER */
+.tarjetas-nosotros section:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+/* 🎨 COLORES SUAVES POR SECCIÓN */
+
+/* Historia */
+.historia{
+    background: #e8f1ff;
+}
+
+/* Misión */
+.mision{
+    background: #e9fbe9;
+}
+
+/* Visión */
+.vision{
+    background: #fff6e6;
+}
+
+/* Valores */
+.valores{
+    background: #f5e9ff;
+}
+
+/* Bandera */
+.bandera{
+    background: #e6fbff;
+}
+
+/* Himno */
+.himno{
+    background: #ffeaf2;
+}
+
+/* TITULOS */
+.tarjetas-nosotros h2{
+    color: #125D69;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #125D69;
+}
+
+.tarjetas-nosotros h3{
+    color: #125D69;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* PARRAFOS */
+.tarjetas-nosotros p{
+    color: #444;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* DISTRIBUCIÓN */
+
+.historia{
+    grid-column: 1 / 3;
+}
+
+.mision{
+    grid-column: 1 / 2;
+}
+
+.vision{
+    grid-column: 2 / 3;
+}
+
+.valores{
+    grid-column: 1 / 2;
+}
+
+.bandera{
+    grid-column: 2 / 3;
+}
+
+.himno{
+    grid-column: 1 / 3;
+}
+
+/* BANDERA */
+
+.bandera img{
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+.bandera{
+    text-align: center;
+}
+
+/* Centrar listas */
+.bandera ul{
+    list-style-position: inside;
+    padding: 0;
+}
+
+/* Opcional: mejorar espaciado */
+.bandera li{
+    margin: 5px 0;
+}
+/* HIMNO */
+
+.himno{
+    text-align: center;
+}
+
+.himno p{
+    text-align: center;
+    white-space: pre-line;
+    font-style: italic;
+}
+
+.himno h3{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* VALORES */
+
+.valores{
+    column-count: 2;
+    column-gap: 40px;
+}
+
+.valores h3{
+    break-after: avoid;
+}
+
+.valores p{
+    break-inside: avoid;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px){
+
+    .tarjetas-nosotros{
+        grid-template-columns: 1fr;
+    }
+
+    .historia,
+    .mision,
+    .vision,
+    .valores,
+    .bandera,
+    .himno{
+        grid-column: auto;
+    }
+
+    .valores{
+        column-count: 1;
+    }
+}
+/* ========================= */
+/* MULTIMEDIA */
+/* ========================= */
+
+.multimedia{
+    text-align: center;
+}
+
+.multimedia video{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin: 15px 0 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.multimedia audio{
+    width: 100%;
+    max-width: 500px;
+    margin-top: 15px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px){
+
+    .tarjetas-nosotros{
+        padding: 10px;
+    }
+
+    .tarjetas-nosotros section{
+        padding: 20px;
+    }
+
+    .tarjetas-nosotros h2{
+        font-size: 1.5rem;
+    }
+
+    .multimedia video{
+        max-width: 100%;
+    }
+
+}
+h1{
+    display:none;
+}
