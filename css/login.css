@@ -183,6 +183,56 @@ button:hover {
     color: #355b6a;
 }
 
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 24, 35, 0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    width: min(100%, 420px);
+    box-shadow: 0 15px 40px rgba(15, 76, 92, 0.2);
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin: 0 0 10px;
+    color: #0f4c5c;
+}
+
+.modal-content p {
+    margin: 0 0 18px;
+    color: #355b6a;
+    line-height: 1.6;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.secondary-btn {
+    background: #e2ebf0;
+    color: #234a5b;
+}
+
+.secondary-btn:hover {
+    background: #d5e2e8;
+}
+
 @media (max-width: 900px) {
     .page-shell {
         grid-template-columns: 1fr;

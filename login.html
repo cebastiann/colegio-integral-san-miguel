@@ -57,6 +57,17 @@
 
                 <p id="statusMessage" class="status-message" aria-live="polite">Tu acceso será verificado por el sistema institucional.</p>
 
+                <div id="loginModal" class="modal" aria-hidden="true">
+                    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                        <h3 id="modalTitle">Estado del acceso</h3>
+                        <p id="modalMessage">Procesando tu solicitud...</p>
+                        <div class="modal-actions">
+                            <button type="button" id="closeModalBtn" class="secondary-btn">Cerrar</button>
+                            <button type="button" id="modalConfirmBtn">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="support-box">
                     <i class="fa-solid fa-headset"></i>
                     <p>¿Necesitas ayuda? Escríbenos al soporte institucional.</p>
@@ -65,25 +76,6 @@
         </section>
     </div>
 
-    <script>
-        const form = document.getElementById('loginForm');
-        const statusMessage = document.getElementById('statusMessage');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const usuario = document.getElementById('usuario').value.trim();
-            const password = document.getElementById('password').value.trim();
-
-            if (!usuario || !password) {
-                statusMessage.textContent = 'Completa tu usuario y contraseña para continuar.';
-                statusMessage.style.color = '#b91c1c';
-                return;
-            }
-
-            statusMessage.textContent = `Bienvenido, ${usuario}. El acceso institucional está listo para continuar.`;
-            statusMessage.style.color = '#0f766e';
-        });
-    </script>
+    <script src="js/login-modal.js"></script>
 </body>
 </html>
