@@ -1,18 +1,56 @@
-/*====Reset Basico====*/
+ /*====Reset Basico====*/
+:root {
+    --color-principal: #0f4c5c;
+    --color-secundario: #2a7f62;
+    --color-acento: #f4a261;
+    --color-fondo: #f5f7fa;
+    --color-superficie: #ffffff;
+    --color-texto: #233142;
+    --color-borde: #dbe3ea;
+    --sombra-suave: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/*====Estilo general del sitio====*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, var(--color-fondo) 0%, #eef4f8 100%);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+main {
+    background: transparent;
+    padding-bottom: 2rem;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-principal);
+}
+
+section {
+    margin: 2rem auto;
+}
+
 /*====Barra de Navegación====*/
 nav {
-    background-color: #56646a; 
     position: sticky;
     top: 0;
-}
-main{
-
-    background-color: white;
+    z-index: 1000;
 }
 
 .menu {
@@ -58,12 +96,6 @@ ul.submenu a {
 ul.submenu a:hover {
     background-color: #77cdba; /*Color al pasar el mouse por el submenu */
 }
-body {
-    font-family: Arial, sans-serif; /*Fuente general */
-    background-color: white; /*Color de fondo */
-    color: #333333; /*Color del texto */
-    line-height: 1.6; /*Altura de línea para mejorar la legibilidad */
-}
 .logo{
     display: flex;
     align-items: center;
@@ -95,8 +127,7 @@ body {
 }
 nav{
     background-image:
-    linear-gradient(rgba(0,0,0,0.5),
-                    rgba(0,0,0,0.5)),
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url("../img/navegacion.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -107,48 +138,42 @@ nav{
     align-items: center;
     position: sticky;
     top: 0;
-    padding: 20px 20px;
-    
+    padding: 20px 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 /* Sección de bienvenida  de aquí hacía abajo comienza en el cuerpo de la página */
 .banner{
     height: 350px;
-
     background-image:
-    linear-gradient(rgba(0,0,0,.4),
-                    rgba(0,0,0,.4)),
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
     url("../img/fondo.png");
-
     background-size: cover;
     background-position: center;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     color: white;
-}
-nav{
-    background-color: #56646a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 40px 4px; /* arriba-abajo | izquierda-derecha */
+    padding: 2rem;
+    box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.12);
 }
 .banner h3{
     font-size: 25px;
-    font-weight: normal;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .banner h1{
     font-size: 55px;
     margin: 15px 0;
+    color: white;
 }
 
 .banner p{
     font-size: 24px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Noticias */
@@ -171,11 +196,10 @@ nav{
     width: 350px;
     border-radius: 20px;
     overflow: hidden;
-    background: white;
-    box-shadow: 0 4x 10px black;
-    font-family: Arial;
-   
-  
+    background: var(--color-superficie);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--color-borde);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .tarjeta img{
     width: 100%;
@@ -189,38 +213,41 @@ nav{
 .tarjeta p{
     margin: 5px 10px;
 }
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.12);
+}
+
 .tarjeta:hover img{
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 /* Botón */
 
+.btn-reglamento, .Btn-inicio, .btn-info{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
 .btn-reglamento{
-    display: inline-block;
-    margin-top: 30px;
-
-    padding: 12px 25px;
-
-    background-color: #48688147;
-    color: black;
-
-    text-decoration: none;
-    border-radius: 5px;
+    background-color: #e8f3ef;
+    color: var(--color-principal);
 }
-.btn-reglamento:hover{
-    transform: scale(1.1);
-}
+
 .Btn-inicio{
-    display: inline-block;
-    margin-top: 1px;
-    padding: 12px 25px;
-    background-color: #7092c293;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    border-radius: 8px;
+    background-color: #fef3d2;
+    color: #7a4b00;
 }
-.Btn-inicio:hover{
-    transform: scale(1.1);
+
+.btn-reglamento:hover, .Btn-inicio:hover, .btn-info:hover{
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
 }
 /* ========================= */
 /* HORARIO ACADÉMICO */
