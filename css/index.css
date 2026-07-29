@@ -224,7 +224,7 @@ nav{
 
 /* Botón */
 
-.btn-reglamento, .Btn-inicio, .btn-info{
+.btn-reglamento, .btn-info{
     display: inline-block;
     margin-top: 20px;
     padding: 12px 25px;
@@ -240,12 +240,24 @@ nav{
     color: var(--color-principal);
 }
 
-.Btn-inicio{
-    background-color: #fef3d2;
-    color: #7a4b00;
+.menu .Btn-inicio {
+    display: block;
+    margin-top: 0;
+    padding: 15px 20px;
+    border-radius: 0;
+    background-color: transparent;
+    color: #ffffff;
+    box-shadow: none;
+    font-weight: 500;
 }
 
-.btn-reglamento:hover, .Btn-inicio:hover, .btn-info:hover{
+.menu .Btn-inicio:hover {
+    background-color: #4d657cbd;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-reglamento:hover, .btn-info:hover{
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
 }
